@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+
+    <style>
+
+        body{
+            font-family: Arial;
+            background: #f2f2f2;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .payment-box{
+            background: white;
+            width: 400px;
+            margin: auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        input{
+            width: 90%;
+            padding: 12px;
+            margin-top: 10px;
+            border-radius: 8px;
+            border: 1px solid gray;
+        }
+
+        .upi-box{
+            display: none;
+            margin-top: 20px;
+        }
+
+        button{
+            background: green;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        button:hover{
+            background: darkgreen;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="payment-box">
+
+        <h1>Payment Page</h1>
+
+        <h2>Total Price : ₹ {{ total }}</h2>
+
+        <form method="POST">
+
+            <input 
+                type="text"
+                name="address"
+                placeholder="Enter Delivery Address"
+                required
+            >
+
+            <br><br>
+
+            <h3>Select Payment Method</h3>
+
+            <input
+    type="radio"
+    name="payment_method"
+    value="Cash On Delivery"
+    onclick="hideUPI()"
+    required
+>
+Cash On Delivery
+            
+
+            <br><br>
+
+            <input 
+                type="radio"
+                name="payment_method"
+                value="UPI"
+                onclick="showUPI()"
+            >
+            UPI Payment
+
+            <div class="upi-box" id="upiBox">
+
+                <input 
+                    type="text"
+                    name="upi_id"
+                    placeholder="Enter UPI ID"
+                >
+
+            </div>
+
+            <button type="submit">
+                Confirm Order
+            </button>
+
+        </form>
+
+    </div>
+
+    <script>
+
+        function showUPI(){
+            document.getElementById("upiBox").style.display = "block";
+        }
+
+        function hideUPI(){
+            document.getElementById("upiBox").style.display = "none";
+        }
+
+    </script>
+
+</body>
+</html>

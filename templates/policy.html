@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Food Policy</title>
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#f5f5f5;
+        }
+
+        .navbar{
+            background:black;
+            color:white;
+            padding:20px;
+            text-align:center;
+        }
+
+        .navbar h1{
+            color:#ff5a1f;
+            font-size:40px;
+        }
+
+        .container{
+            width:85%;
+            margin:40px auto;
+        }
+
+        .policy-box{
+            background:white;
+            padding:35px;
+            border-radius:15px;
+            margin-bottom:30px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .policy-box h2{
+            color:#ff5a1f;
+            margin-bottom:15px;
+        }
+
+        .policy-box p{
+            color:#555;
+            line-height:1.8;
+            font-size:18px;
+        }
+
+        .review-section{
+            margin-top:40px;
+        }
+
+        .review-title{
+            text-align:center;
+            margin-bottom:25px;
+            color:#ff5a1f;
+            font-size:40px;
+        }
+
+        .reviews{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+            gap:20px;
+        }
+
+        .review-card{
+            background:white;
+            padding:25px;
+            border-radius:15px;
+            box-shadow:0 5px 15px rgba(0,0,0,0.1);
+            transition:0.3s;
+        }
+
+        .review-card:hover{
+            transform:translateY(-5px);
+        }
+
+        .review-card h3{
+            margin-bottom:10px;
+            color:#222;
+        }
+
+        .stars{
+            color:gold;
+            font-size:20px;
+            margin-bottom:10px;
+        }
+
+        .good{
+            color:green;
+            font-weight:bold;
+        }
+
+        .bad{
+            color:red;
+            font-weight:bold;
+        }
+
+        .footer{
+            background:black;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin-top:50px;
+        }
+
+    </style>
+
+</head>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+<body>
+
+    <div class="navbar">
+        <h1>Smart Food Policies</h1>
+    </div>
+
+    <div class="container">
+
+        <div class="policy-box">
+
+            <h2>Food Quality Policy</h2>
+
+            <p>
+                Smart Food always provides fresh, hygienic and premium quality food.
+                Every order is prepared carefully to maintain taste and health standards.
+            </p>
+
+        </div>
+
+        <div class="policy-box">
+
+            <h2>Refund Policy</h2>
+
+            <p>
+                If customer receives damaged food or delayed delivery,
+                refund request can be made within 30 minutes after delivery.
+            </p>
+
+        </div>
+
+        <div class="policy-box">
+
+            <h2>Delivery Policy</h2>
+
+            <p>
+                Our delivery partners ensure fast and safe delivery.
+                Delivery timing may vary during rush hours and bad weather conditions.
+            </p>
+
+        </div>
+
+        <div class="review-section">
+
+            <h1 class="review-title">
+                Customer Reviews
+            </h1>
+
+            <div class="reviews">
+
+                <div class="review-card">
+
+                    <h3>Rahul Sharma</h3>
+
+                    <div class="stars">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+
+                    <p class="good">
+                        Pizza quality was amazing and delivery was super fast.
+                    </p>
+
+                </div>
+
+                <div class="review-card">
+
+                    <h3>Priya Verma</h3>
+
+                    <div class="stars">
+                        ⭐⭐⭐⭐
+                    </div>
+
+                    <p>
+                        Burger taste was very good and packaging was clean.
+                    </p>
+
+                </div>
+
+                <div class="review-card">
+
+                    <h3>Aman Singh</h3>
+
+                    <div class="stars">
+                        ⭐⭐
+                    </div>
+
+                    <p class="bad">
+                        Pasta delivery was late but food taste was okay.
+                    </p>
+
+                </div>
+
+                <div class="review-card">
+
+                    <h3>Neha Kapoor</h3>
+
+                    <div class="stars">
+                        ⭐⭐⭐⭐⭐
+                    </div>
+
+                    <p class="good">
+                        Best food app experience with excellent customer service.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer">
+
+        <p>
+            © 2026 Smart Food App | All Rights Reserved
+        </p>
+
+    </div>
+
+</body>
+</html>

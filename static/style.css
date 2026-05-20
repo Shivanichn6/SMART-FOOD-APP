@@ -1,0 +1,922 @@
+/* =========================================
+   RESET
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    background:#f5f5f5;
+    color:#222;
+}
+
+/* =========================================
+   NAVBAR
+========================================= */
+
+.navbar{
+    background:#000;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    font-size:40px;
+    font-weight:bold;
+    color:#ff9800;
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+}
+
+.nav-links a{
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.nav-links a:hover{
+    color:#ff9800;
+}
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.hero{
+    height:90vh;
+
+    background:
+    linear-gradient(
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.5)
+    ),
+
+    url("https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=1600");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    color:white;
+}
+
+.hero-content h1{
+    font-size:70px;
+    margin-bottom:20px;
+}
+
+.hero-content p{
+    font-size:24px;
+    margin-bottom:30px;
+}
+
+.btn{
+    display:inline-block;
+
+    background:#ff5722;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:15px 35px;
+
+    border-radius:40px;
+
+    font-size:20px;
+
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#e64a19;
+    transform:scale(1.05);
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+.featured-title{
+    text-align:center;
+    margin-top:40px;
+    margin-bottom:40px;
+}
+
+.featured-title h2{
+    font-size:50px;
+    color:#222;
+}
+
+/* =========================================
+   SEARCH BAR
+========================================= */
+
+.search-box{
+    width:100%;
+    text-align:center;
+    margin-top:30px;
+}
+
+.search-box input{
+    width:50%;
+    padding:15px;
+    border:2px solid #ff5722;
+    border-radius:40px;
+    font-size:18px;
+    outline:none;
+}
+
+.search-box button{
+    padding:15px 25px;
+    border:none;
+    background:#ff5722;
+    color:white;
+    border-radius:40px;
+    font-size:16px;
+    cursor:pointer;
+    margin-left:10px;
+    transition:0.3s;
+}
+
+.search-box button:hover{
+    background:#e64a19;
+}
+
+/* =========================================
+   FOOD CONTAINER
+========================================= */
+.food-container{
+    width:90%;
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fill,minmax(280px,320px));
+
+    justify-content:center;
+
+    gap:30px;
+
+    margin-top:40px;
+    margin-bottom:50px;
+}
+
+/* =========================================
+   FOOD CARD
+========================================= */
+
+.food-card{
+    background:white;
+    border-radius:20px;
+    overflow:hidden;
+
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+
+    transition:0.3s;
+
+    display:flex;
+    flex-direction:column;
+}
+
+.food-card:hover{
+    transform:translateY(-10px);
+}
+
+/* =========================================
+   FOOD IMAGE
+========================================= */
+
+.food-card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    display:block;
+}
+
+/* =========================================
+   FOOD INFO
+========================================= */
+
+.food-info{
+    padding:20px;
+    text-align:center;
+}
+
+.food-info h2{
+    margin-bottom:10px;
+    color:#222;
+    font-size:30px;
+}
+
+.food-info p{
+    color:gray;
+    margin-bottom:10px;
+    font-size:17px;
+}
+
+.food-info h3{
+    color:#ff5722;
+    margin-bottom:15px;
+    font-size:28px;
+}
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.food-info button{
+    background:linear-gradient(135deg,#ff5722,#ff9800);
+
+    color:white;
+
+    border:none;
+
+    padding:14px 28px;
+
+    border-radius:40px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    transition:0.3s;
+
+    min-width:140px;
+
+    white-space:nowrap;
+}
+
+.food-info button:hover{
+    transform:scale(1.05);
+    background:#e64a19;
+}
+
+/* =========================================
+   FLASH MESSAGE
+========================================= */
+
+.flash-message{
+    width:60%;
+    margin:20px auto;
+    background:#4caf50;
+    color:white;
+    padding:15px;
+    text-align:center;
+    border-radius:10px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+/* =========================================
+   TOTAL SECTION
+========================================= */
+
+.total-section{
+    text-align:center;
+    margin:40px 0;
+}
+
+.total-section h1{
+    color:#ff5722;
+    font-size:45px;
+}
+
+/* =========================================
+   EMPTY CART
+========================================= */
+
+.empty-cart{
+    text-align:center;
+    padding:80px 0;
+}
+
+.empty-cart h1{
+    color:#555;
+    font-size:40px;
+}
+
+/* =========================================
+   REMOVE BUTTON
+========================================= */
+
+.remove-btn{
+    background:red !important;
+}
+
+.remove-btn:hover{
+    background:darkred !important;
+}
+
+/* =========================================
+   ORDER BUTTON
+========================================= */
+
+.order-btn{
+    background:#4caf50;
+    color:white;
+    border:none;
+    padding:18px 40px;
+    font-size:22px;
+    border-radius:40px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.order-btn:hover{
+    background:#388e3c;
+    transform:scale(1.05);
+}
+
+/* =========================================
+   ABOUT SECTION
+========================================= */
+
+.about-section{
+    width:80%;
+    margin:auto;
+    text-align:center;
+    padding:60px 0;
+}
+
+.about-section h1{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.about-section p{
+    font-size:22px;
+    line-height:1.8;
+    color:#555;
+}
+
+/* =========================================
+   FORM
+========================================= */
+
+.form-container{
+    width:400px;
+    background:white;
+    margin:50px auto;
+    padding:40px;
+    border-radius:20px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.form-container h2{
+    text-align:center;
+    margin-bottom:25px;
+}
+
+.form-container input{
+    width:100%;
+    padding:15px;
+    margin-bottom:20px;
+    border:1px solid #ccc;
+    border-radius:10px;
+    font-size:16px;
+}
+
+.form-container button{
+    width:100%;
+    background:#ff5722;
+    color:white;
+    border:none;
+    padding:15px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:18px;
+    transition:0.3s;
+}
+
+.form-container button:hover{
+    background:#e64a19;
+}
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer{
+    background:#000;
+    color:white;
+    text-align:center;
+    padding:25px;
+    margin-top:50px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:20px;
+        padding:20px;
+    }
+
+    .nav-links{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    .hero-content h1{
+        font-size:45px;
+    }
+
+    .hero-content p{
+        font-size:18px;
+    }
+
+    .featured-title h2{
+        font-size:35px;
+    }
+
+    .search-box input{
+        width:80%;
+    }
+
+    .food-info h2{
+        font-size:24px;
+    }
+
+    .food-info h3{
+        font-size:22px;
+    }
+
+    .about-section h1{
+        font-size:35px;
+    }
+
+    .about-section p{
+        font-size:18px;
+    }
+
+    .form-container{
+        width:50%;
+    }
+}
+/* =========================================
+   FLASH MESSAGE
+========================================= */
+
+.flash-message{
+    width: fit-content;
+
+    margin: 20px auto;
+
+    background: #28a745;
+
+    color: white;
+
+    padding: 15px 30px;
+
+    border-radius: 10px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+
+    animation: popup 0.5s ease;
+}
+
+@keyframes popup{
+
+    from{
+        transform: scale(0.7);
+        opacity: 0;
+    }
+
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+/* =========================================
+   FLASH MESSAGE
+========================================= */
+
+.flash-message{
+    width: fit-content;
+
+    margin: 20px auto;
+
+    background: #28a745;
+
+    color: white;
+
+    padding: 15px 30px;
+
+    border-radius: 10px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    text-align: center;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+
+    animation: popup 0.5s ease;
+}
+
+@keyframes popup{
+
+    from{
+        transform: scale(0.7);
+        opacity: 0;
+    }
+
+    to{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+/* Checkout Form */
+
+.checkout-form{
+    width: 50%;
+    margin: 40px auto;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.checkout-form h2{
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ff5a1f;
+}
+
+.checkout-form input,
+.checkout-form textarea,
+.checkout-form select{
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+}
+
+.checkout-form textarea{
+    height: 100px;
+    resize: none;
+}
+
+.checkout-form button{
+    width: 100%;
+    padding: 12px;
+    background: #ff5a1f;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.checkout-form button:hover{
+    background: #e14b12;
+}
+.cart-container{
+    padding: 40px;
+}
+
+.cart-card{
+    display: flex;
+    gap: 20px;
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.cart-card img{
+    width: 200px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.cart-info h2{
+    margin-bottom: 10px;
+}
+
+.checkout-btn{
+    padding: 10px 20px;
+    background: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+.cart-container{
+    padding: 40px;
+    background: #ececec;
+    min-height: auto;
+}
+.cart-container h1{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cart-items{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.cart-card{
+    width: 220px;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.2);
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.cart-card img{
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+}
+
+.cart-info{
+    padding: 15px;
+}
+
+.cart-info h2{
+    margin-bottom: 10px;
+}
+
+.cart-info p{
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.cart-info h3{
+    color: orangered;
+    margin-bottom: 15px;
+}
+
+.remove-btn{
+    padding: 10px 20px;
+    border: none;
+    background: red;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.total-section{
+    margin-top: 30px;
+    text-align: center;
+}
+.order-btn{
+    margin-top: 20px;
+    padding: 12px 30px;
+    border: none;
+    background: green;
+    color: white;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.cart-page{
+    padding: 40px;
+    background: #e9e9e9;
+    min-height: 100vh;
+}
+
+.cart-page h1{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.cart-container{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    min-height: auto;
+padding: 20px;
+}
+
+.cart-card{
+    width: 250px;
+    background: white;
+    border-radius: 15px; 
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0px 0px 10px gray;
+}
+
+.cart-card img{
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.cart-card h2{
+    margin-top: 10px;
+}
+
+.cart-card p{
+    margin: 5px 0;
+}
+
+.remove-btn{
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.total-section{
+    text-align: center;
+    margin-top: 10px;
+    .total-section{
+    text-align: center;
+    margin-top: 10px;
+}
+}
+
+
+.total-section{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.place-order-btn{
+    background: green;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.cart-container{
+    padding: 40px;
+    background: #ececec;
+    min-height: auto;
+}
+
+.cart-container h1{
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.cart-items{
+    display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 20px;
+}
+
+.cart-card{
+    width: 220px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.cart-card img{
+    height: 120px;
+}
+
+
+.cart-card h2{
+    margin-top: 10px;
+}
+
+.cart-card h3{
+    color: orangered;
+}
+
+.remove-btn{
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.total-section{
+    text-align: center;
+    margin-top: 50px;
+}
+
+.order-btn{
+    background: green;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.cart-page{
+    padding: 40px;
+    text-align: center;
+    background: #f2f2f2;
+    min-height: 100vh;
+}
+
+.cart-container{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+.cart-card{
+    width: 220px;
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+    text-align: center;
+
+    display: inline-block;
+    height: fit-content;
+}
+.cart-card img{
+    width: 90%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.cart-card h2{
+    margin-top: 10px;
+}
+
+.cart-card h3{
+    color: orangered;
+    margin-top: 10px;
+}
+
+.remove-btn{
+    background: red;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.total-section{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.total-section h1{
+    color: orangered;
+}
+
+.order-btn{
+    background: green;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Login</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+<body>
+
+    <!-- NAVBAR -->
+
+    <div class="navbar">
+
+        <h1>🍴 Smart Food</h1>
+
+        <div class="nav-links">
+
+            <a href="/">Home</a>
+
+            <a href="/menu">Menu</a>
+
+            <a href="/about">About</a>
+
+            <a href="/signin">Login</a>
+
+        </div>
+
+    </div>
+
+    <!-- LOGIN FORM -->
+
+    <div class="form-container">
+
+        <h2>User Login</h2>
+
+        <form method="POST">
+
+            <input type="email"
+            name="email"
+            placeholder="Enter Email"
+            required>
+
+            <input type="password"
+            name="password"
+            placeholder="Enter Password"
+            required>
+
+            <button type="submit">
+                Login Now
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

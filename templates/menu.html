@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Food Menu</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+
+            🍴 Smart Food
+
+        </div>
+
+        <div class="nav-links">
+
+            <a href="/">Home</a>
+
+            <a href="/menu">Menu</a>
+
+            <a href="/about">About</a>
+
+            <a href="/cart">
+
+                Cart ({{ cart_count }})
+
+            </a>
+
+            <a href="/signin">Login</a>
+
+        </div>
+
+    </nav>
+    <!-- SEARCH BAR -->
+
+<div class="search-box">
+
+    <form method="GET" action="/menu">
+
+        <input type="text"
+
+        name="search"
+
+        placeholder="Search Food..."
+
+        value="{{ search }}">
+
+        <button type="submit">
+
+            Search
+
+        </button>
+
+    </form>
+
+</div>
+
+    <!-- FLASH MESSAGE -->
+
+    {% with messages = get_flashed_messages() %}
+
+        {% if messages %}
+
+                {% for message in messages %}
+
+                <div class="flash-message">
+
+                    {{ message }}
+
+                </div>
+
+            {% endfor %}
+
+        {% endif %}
+
+    {% endwith %}
+
+    <!-- TITLE -->
+
+    <div class="featured-title">
+
+        <h2>Our Delicious Menu</h2>
+
+    </div>
+
+    <!-- FOOD ITEMS -->
+
+    <div class="food-container">
+
+        {% for item in menu_items %}
+
+        <div class="food-card">
+
+            <img src="{{ item.image }}" alt="{{ item.name }}">
+
+            <div class="food-info">
+
+                <h2>{{ item.name }}</h2>
+
+                <p>{{ item.category }}</p>
+
+                <h3>₹ {{ item.price }}</h3>
+
+                <a href="{{ url_for('add_to_cart', item_id=item.id) }}">
+
+                    <button>
+
+                        Add To Cart
+
+                    </button>
+
+                </a>
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+
+        <p>
+
+            © 2026 Smart Food App |
+            Delicious Food Delivered Fast
+
+        </p>
+
+    </div>
+
+</body>
+
+</html>
